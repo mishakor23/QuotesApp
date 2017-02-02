@@ -1,0 +1,14 @@
+<app-profile-info [user]="user$ | async"></app-profile-info>
+<div>
+  <nav md-tab-nav-bar aria-label="Profile">
+    <a routerLink="citations" [active]="getActiveTabIndex() === 0 " #cit md-tab-link>
+      My Citations
+    </a>
+    <a routerLink="favourites" [active]="getActiveTabIndex() === 1" #fav md-tab-link>
+      My Favourites
+    </a>
+  </nav>
+  <div class="app-top-margin">
+    <router-outlet></router-outlet>
+  </div>
+</div>

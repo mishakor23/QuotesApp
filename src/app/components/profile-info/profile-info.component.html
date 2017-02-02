@@ -1,0 +1,9 @@
+<md-card>
+  <md-card-header>{{user?.username}}</md-card-header>
+  <md-card-content>
+    <p>Rank: {{user?.rank}}</p>
+    <p>Subscibers: {{user?.subscribers}}</p>
+    <p>Email: {{user?.email}}</p>
+  </md-card-content>
+  <md-slide-toggle *ngIf="authService.isLoggedIn()" [disabled]="(user == null)" [ngModel]="getSubIndex() > -1" (change)="onToggleChange()">Subscription</md-slide-toggle>
+</md-card>

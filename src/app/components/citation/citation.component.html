@@ -1,0 +1,31 @@
+<md-card class="citation" *ngIf="citation">
+
+  <md-toolbar color="accent" >
+    <a class="userLink" [routerLink]="['/user', citation.user.id]">{{citation.user.username}}</a>
+    <md-card class="citationRankValue">{{citation.ratings.getRank()}}</md-card>
+  </md-toolbar>
+
+  <md-card-content class="citationContent">
+    <md-card-title>{{citation.text}}</md-card-title>
+
+    <md-card-subtitle>© {{citation.author}}</md-card-subtitle>
+
+    <md-chip-list *ngIf="citation.tags" >
+      <md-chip class="tagChips" *ngFor="let tag of citation.tags" [routerLink]="['/tag', tag]">#{{tag }}</md-chip>
+    </md-chip-list>
+  </md-card-content>
+  <md-toolbar>
+
+    <app-citation-rank *ngIf="canRate()" #rank class="citationRank" align="end"
+      [rank]="citation.ratings"
+      (liked)="onLike()"
+      (disliked)="onDislike()">
+    </app-citation-rank>
+
+    <button *ngIf="canDelete()" (click)="onDelete()" md-icon-button="" align="start">
+      <md-icon color="primary">delete forever</md-icon>
+    </button>
+
+  </md-toolbar>
+
+</md-card>

@@ -1,0 +1,9 @@
+
+<md-card class="notFound app-top-margin" *ngIf="!_citations || _citations.length == 0">
+  <h2>No citations found..</h2>
+</md-card>
+<ul *ngIf="_citations && _citations.length > 0" class="mainList">
+  <li class="app-top-margin" *ngFor="let cit of _citations">
+    <app-citation [citation]="cit"></app-citation>
+  </li>
+</ul>

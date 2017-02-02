@@ -1,0 +1,45 @@
+<md-card>
+  <md-toolbar color="primary">Register</md-toolbar>
+  <md-card-content>
+    <form [formGroup]="form" autocomplete="off" novalidate>
+
+      <div class="row">
+
+        <div class="col-xs-12">
+          <md-input-container floatingPlaceholder="false" [dividerColor]="usernameError == ''?'primary':'warn'" class="full-width">
+            <input md-input formControlName="username" #textAreaField placeholder="Username">
+            <md-hint *ngIf="usernameError" color="red" align="start">{{usernameError}}</md-hint>
+          </md-input-container>
+        </div>
+
+        <div class="col-xs-12">
+          <md-input-container floatingPlaceholder="false" [dividerColor]="emailError == ''?'primary':'warn'" class="full-width">
+            <input md-input formControlName="email" #textAreaField placeholder="Email">
+            <md-hint *ngIf="emailError" color="red" align="start">{{emailError}}</md-hint>
+          </md-input-container>
+        </div>
+
+        <div class="col-xs-12">
+          <md-input-container floatingPlaceholder="false" [dividerColor]="passwordError == ''?'primary':'warn'" class="full-width">
+            <input type="password" md-input formControlName="password" #textAreaField placeholder="Password">
+            <md-hint *ngIf="passwordError" color="red" align="start">{{passwordError}}</md-hint>
+          </md-input-container>
+        </div>
+
+        <div class="col-md-4 col-sm-12">
+          <md-progress-bar mode="determinate"
+                           [value]="passStrength"
+                           color="primary">
+          </md-progress-bar>
+        </div>
+        <div class="pass-strength col-xs-12">
+          <md-hint>Password strength</md-hint>
+        </div>
+
+        <div class="offset-xs-4 col-xs-4">
+          <button class="submit-btn" md-dialog-close (click)="onSubmit()" type="button" md-raised-button color="primary">Submit</button>
+        </div>
+      </div>
+    </form>
+  </md-card-content>
+</md-card>

@@ -1,1 +1,102 @@
 /* You can add global styles to this file, and also import other style files */
+@import "theme";
+
+.app-top-margin
+{
+  margin-top: 16px;
+}
+
+.item
+{
+  border: 1px solid lightblue;
+}
+
+.activeLink
+{
+  font-weight: bold;
+}
+
+.notFound
+{
+  text-align: center;
+  color: #a87800;
+  box-sizing: border-box;
+}
+
+//------------------------------------
+
+.vertCenterContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vertCenterItem {
+  max-width: 50%;
+}
+
+ul li:first-child { margin-top: 0 !important;}
+
+.citation
+{
+  padding: 0;
+  position: relative;
+
+  @media screen and (max-width: 400px) {
+    font-size: 12px !important;
+  }
+}
+
+.tagChips
+{
+  margin: 3px !important;
+  margin-bottom: 5px !important;
+}
+
+button:focus {outline:0;}
+
+.submit-btn
+{
+  margin-top: 0 !important;
+}
+
+.full-width
+{
+  width: 100%
+}
+
+.demo-textarea {
+  resize: none;
+  overflow: auto;
+  width: 100%;
+  padding: 0;
+  font-size: larger;
+  box-sizing: border-box;
+}
+
+.light-icon
+{
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.50);
+  width: 14px;
+}
+
+.inline-block
+{
+  display: inline-block;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  background: #F5F5F5;
+}
+
+div, h1, h2, h3, h4, h5
+{
+  margin: 0;
+  padding: 0;
+}
+

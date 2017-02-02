@@ -1,0 +1,8 @@
+<div class="app-top-margin" fxLayout="row" fxLayoutAlign="center center">
+    <app-citation-form class="full-width" (submitted)="addCitation($event)"></app-citation-form>
+</div>
+
+<div fxLayout="row" fxLayoutAlign="center center">
+    <app-citation-list class="full-width" [citations]="citations$ | async"></app-citation-list>
+</div>
+

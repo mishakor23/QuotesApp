@@ -1,0 +1,142 @@
+{
+  "ranks": {
+    "citation1": {
+      "user1": "true",
+      "user2": "true",
+      "user3": "true"
+    },
+    "citation2": {
+      "user1": "true",
+      "user2": "true",
+      "user3": "true"
+    },
+    "citation3": {
+      "user1": "true",
+      "user2": "true",
+      "user3": "true"
+    }
+  }
+}
+
+  "citations" : {
+    "-K_yhC6qJesAvMnRUDlF" : {
+      "author" : "Sugrow",
+      "date_published" : 1483889496654,
+      "id" : "-K_yhC6qJesAvMnRUDlF",
+      "rank" : 1,
+      "ratings" : {
+        "dislikes" : [ {
+          "email" : "",
+          "id" : "dummy",
+          "username" : ""
+        } ],
+        "likes" : [ {
+          "email" : "",
+          "id" : "dummy",
+          "username" : ""
+        }, {
+          "email" : "parez3@gmail.com",
+          "id" : "Us7wP6DvEghXvk0I3HIGiFbRyU32",
+          "username" : "PapaTvoi"
+        } ]
+      },
+      "text" : "Кричащая красота уже не так красива, как красота скромная, молчаливая. Поэтому я всегда предпочитаю молчать.",
+      "user" : {
+        "email" : "parezguru@gmail.com",
+        "id" : "cLopoZE2NyNahOANvKHILrNwjAo2",
+        "username" : "Sugrow"
+      },
+      "views" : 0
+    },
+    "-K_yhJnZ4j8XPAC6TsSL" : {
+      "author" : "Sugrow",
+      "date_published" : 1483889528125,
+      "id" : "-K_yhJnZ4j8XPAC6TsSL",
+      "rank" : 1,
+      "ratings" : {
+        "dislikes" : [ {
+          "email" : "",
+          "id" : "dummy",
+          "username" : ""
+        } ],
+        "likes" : [ {
+          "email" : "",
+          "id" : "dummy",
+          "username" : ""
+        }, {
+          "email" : "parez3@gmail.com",
+          "id" : "Us7wP6DvEghXvk0I3HIGiFbRyU32",
+          "username" : "PapaTvoi"
+        } ]
+      },
+      "text" : "Ставя перед собой цель, ты закрываешь себе все, что расположено за ней. Не ставь перед собой целей. Ставь их за собой. И тогда ты сможешь смотреть вдаль.",
+      "user" : {
+        "email" : "parezguru@gmail.com",
+        "id" : "cLopoZE2NyNahOANvKHILrNwjAo2",
+        "username" : "Sugrow"
+      },
+      "views" : 0
+    },
+    "-K_yjwO6lRSJ66hGwCVI" : {
+      "author" : "PapaTvoi",
+      "date_published" : 1483890214559,
+      "id" : "-K_yjwO6lRSJ66hGwCVI",
+      "rank" : 1,
+      "ratings" : {
+        "dislikes" : [ {
+          "email" : "",
+          "id" : "dummy",
+          "username" : ""
+        } ],
+        "likes" : [ {
+          "email" : "",
+          "id" : "dummy",
+          "username" : ""
+        }, {
+          "email" : "parez3@gmail.com",
+          "id" : "Us7wP6DvEghXvk0I3HIGiFbRyU32",
+          "username" : "PapaTvoi"
+        } ]
+      },
+      "text" : "paopaopaopaoa",
+      "user" : {
+        "email" : "parez3@gmail.com",
+        "id" : "Us7wP6DvEghXvk0I3HIGiFbRyU32",
+        "username" : "PapaTvoi"
+      },
+      "views" : 0
+    },
+    "-Ka3hJbmvWYlwj-Hdfub" : {
+      "author" : "PapaTvoi",
+      "date_published" : 1483990193555,
+      "id" : "-Ka3hJbmvWYlwj-Hdfub",
+      "rank" : 1,
+      "ratings" : {
+        "dislikes" : [ {
+          "email" : "",
+          "id" : "dummy",
+          "username" : ""
+        } ],
+        "likes" : [ {
+          "email" : "",
+          "id" : "dummy",
+          "username" : ""
+        }, {
+          "email" : "parez3@gmail.com",
+          "id" : "Us7wP6DvEghXvk0I3HIGiFbRyU32",
+          "username" : "PapaTvoi"
+        } ]
+      },
+      "text" : "Newest citation",
+      "user" : {
+        "email" : "parez3@gmail.com",
+        "id" : "Us7wP6DvEghXvk0I3HIGiFbRyU32",
+        "username" : "PapaTvoi"
+      },
+      "views" : 0
+    }
+  },
+  "userRatings" : {
+    "user1" : "like"
+  }
+}

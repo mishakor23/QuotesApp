@@ -1,0 +1,18 @@
+<md-card-content>
+  <div class="row innerPadding" [formGroup]="form">
+    <div class="col-xs-12">
+      <md-input-container class="full-width">
+        <span md-prefix class="light-icon">#</span>
+        <input md-input formControlName="tagInput" placeholder="Tags" (keyup)="onTagType($event)">
+      </md-input-container>
+    </div>
+
+    <div class="col-xs-12">
+      <md-chip-list class="full-width">
+        <md-chip *ngFor="let tag of tags; let i=index" color="secondary" class="tagChips" (click)="removeTag(i)">
+          #{{tag}}
+        </md-chip>
+      </md-chip-list>
+    </div>
+  </div>
+</md-card-content>

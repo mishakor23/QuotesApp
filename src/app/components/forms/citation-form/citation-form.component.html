@@ -1,0 +1,32 @@
+<md-card>
+  <md-toolbar color="primary">Add Citation</md-toolbar>
+  <md-card-content>
+    <form [formGroup]="form" autocomplete="off" novalidate>
+      <div class="row">
+        <div>
+            <md-input-container dividerColor="primary" class="full-width">
+              <textarea md-input md-autosize formControlName="text" #textAreaField placeholder="Citation text"></textarea>
+              <md-hint align="end">{{textAreaField.value.length}} / minimum {{minTextLength}}</md-hint>
+              <md-hint *ngIf="textError" color="warn" align="start">{{textError}}</md-hint>
+            </md-input-container>
+        </div>
+        <div>
+          <md-input-container class="full-width" [floatingPlaceholder]="isFloating">
+            <span md-prefix class="light-icon">©</span>
+            <input md-input formControlName="author"
+                   [placeholder]="authorHint" >
+            <md-hint *ngIf="authorError" color="warn" align="start">{{authorError}}</md-hint>
+          </md-input-container>
+        </div>
+        <div class="authorCheckbox" >
+          <md-checkbox class="full-width " formControlName="iAmAuthor" (change)="toggleAuthor()">I am the author</md-checkbox>
+        </div>
+        <app-tag-input formControlName="tagInput" class="innerComponent" [maxTags]="5"></app-tag-input>
+        <div>
+          <button class="full-width submit-btn" (click)="onSubmit()" type="button" md-raised-button color="primary">Submit</button>
+        </div>
+      </div>
+
+    </form>
+  </md-card-content>
+</md-card>
