@@ -5,15 +5,15 @@
       <div class="row">
         <div>
             <md-input-container dividerColor="primary" class="full-width">
-              <textarea md-input md-autosize formControlName="text" #textAreaField placeholder="Citation text"></textarea>
+              <textarea mdInput md-autosize formControlName="text" #textAreaField placeholder="Citation text"></textarea>
               <md-hint align="end">{{textAreaField.value.length}} / minimum {{minTextLength}}</md-hint>
               <md-hint *ngIf="textError" color="warn" align="start">{{textError}}</md-hint>
             </md-input-container>
         </div>
         <div>
-          <md-input-container class="full-width" [floatingPlaceholder]="isFloating">
+          <md-input-container class="full-width" [floatPlaceholder]="isFloating">
             <span md-prefix class="light-icon">©</span>
-            <input md-input formControlName="author"
+            <input mdInput formControlName="author"
                    [placeholder]="authorHint" >
             <md-hint *ngIf="authorError" color="warn" align="start">{{authorError}}</md-hint>
           </md-input-container>

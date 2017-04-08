@@ -22,5 +22,11 @@
 
 .userLink
 {
-  color: rgba(186, 232, 255, 0.82);
+  color: #c6c9f5;
+  text-decoration: none;
+}
+
+.userLink:hover
+{
+  color: white;
 }

@@ -1,0 +1,6 @@
+<ng-template #loader>
+    <md-spinner class="spinner"></md-spinner>
+</ng-template>
+
+<app-citation-list *ngIf="(citations$ | async) as cit else loader" [citations]="cit">
+</app-citation-list>

@@ -7,7 +7,8 @@ import {MdDialog} from '@angular/material/dialog/dialog';
 import {CitationService} from '../services/citation.service';
 import {AuthService} from '../services/auth.service';
 import {MdDialogConfig} from '@angular/material/dialog/dialog-config';
-import {Subscription} from '../../../node_modules/rxjs/Subscription';
+import {Subscription} from 'rxjs/Subscription';
+import {Router} from '@angular/router';
 
 @Directive({
   selector: '[appDialogManager]'
@@ -29,7 +30,7 @@ export class DialogManagerDirective implements OnInit{
   constructor(private utilsService:UtilsService,
               public dialog: MdDialog,
               private citService:CitationService,
-              private userService:AuthService) { }
+              private userService:AuthService, private router:Router) { }
 
   ngOnInit() {
     this.utilsService.onDialog().subscribe( (dial) => {
@@ -53,6 +54,7 @@ export class DialogManagerDirective implements OnInit{
       this.userService.signUp(ev).then( succ => {
         this.utilsService.pushMessage("Registered successfully as " + succ.auth.displayName);
         formDialog.close();
+        this.router.navigate(['/profile']);
         subscr.unsubscribe();
       }).catch( (err:Error) => {
         this.utilsService.pushMessage("Error: " + err.message);
@@ -88,7 +90,6 @@ export class DialogManagerDirective implements OnInit{
         this.utilsService.pushMessage("Logged in successfully as "+ succ.auth.displayName);
         formDialog.close();
         subscr.unsubscribe();
-
       }).catch( (err:Error) => {
         this.utilsService.pushMessage("Error: " + err.message);
       });

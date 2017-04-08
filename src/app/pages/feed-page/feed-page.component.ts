@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {Citation} from '../../models/citation';
 import {Observable} from '../../../../node_modules/rxjs/Observable';
 import {CitationService} from '../../services/citation.service';
-import {UtilsService} from '../../services/utils.service';
 import {AuthService} from '../../services/auth.service';
 
 @Component({
@@ -16,7 +15,7 @@ export class FeedPageComponent implements OnInit {
 
   citations$:Observable<Citation[]>;
 
-  constructor(public citService:CitationService, private utilsService:UtilsService, public userService:AuthService) {
+  constructor(public citService:CitationService, public userService:AuthService) {
 
   }
 

@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from '../../../../node_modules/@angular/router/src/router_state';
 import {Router} from '@angular/router';
 import {AuthService} from '../../services/auth.service';
-import {Observable} from '../../../../node_modules/rxjs/Observable';
+import {Observable} from 'rxjs/Observable';
 import {User} from '../../models/user';
 
 @Component({

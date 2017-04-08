@@ -14,7 +14,7 @@ export class UtilsService {
 
   onMessage():Observable<string>
   {
-    return this.messages$;
+    return this.messages$.asObservable();
   }
 
   pushMessage(msg:string):void
@@ -24,20 +24,11 @@ export class UtilsService {
 
   onDialog():Observable<string>
   {
-    return this.dialog$;
+    return this.dialog$.asObservable();
   }
 
   openDialog(dialog:string):void
   {
     this.dialog$.next(dialog);
-  }
-
-  public static handleError (error: any) {
-    // In a real world app, we might use a remote logging infrastructure
-    // We'd also dig deeper into the error to get a better message
-    let errMsg = (error.message) ? error.message :
-      error.status ? `${error.status} - ${error.statusText}` : 'Server error';
-    console.error(errMsg); // log to console instead
-    return Observable.throw(errMsg);
   }
 }

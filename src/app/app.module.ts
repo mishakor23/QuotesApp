@@ -31,9 +31,11 @@ import { TagPageComponent } from './pages/tag-page/tag-page.component';
 import {AuthGuard} from './guards/AuthGuard';
 import { UserPageComponent } from './pages/user-page/user-page.component';
 import { DialogManagerDirective } from './components/dialog-manager.directive';
-import { SubscribeComponent } from './components/subscribe/subscribe.component';
 import {UsersService} from './services/users.service';
 import { FeedPageComponent } from './pages/feed-page/feed-page.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
+import { CitationListPreloaderComponent } from './components/citation-list-preloader/citation-list-preloader.component';
 
 @NgModule({
   declarations: [
@@ -54,8 +56,9 @@ import { FeedPageComponent } from './pages/feed-page/feed-page.component';
     TagPageComponent,
     UserPageComponent,
     DialogManagerDirective,
-    SubscribeComponent,
     FeedPageComponent,
+    LoginPageComponent,
+    CitationListPreloaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -64,9 +67,10 @@ import { FeedPageComponent } from './pages/feed-page/feed-page.component';
     HttpModule,
     RouterModule,
     AppRoutingModule,
-    MaterialModule.forRoot(),
-    FlexLayoutModule.forRoot(),
-    AngularFireModule.initializeApp(config)
+    MaterialModule,
+    FlexLayoutModule,
+    AngularFireModule.initializeApp(config),
+    BrowserAnimationsModule
   ],
   providers: [
     UtilsService,

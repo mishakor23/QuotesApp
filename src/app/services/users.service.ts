@@ -1,16 +1,7 @@
 import { Injectable } from '@angular/core';
 import {User} from "../models/user";
 import {Observable} from 'rxjs/Rx';
-import {Http, Response, Headers, RequestOptions} from '@angular/http';
-import {LoginCredentials} from '../models/loginCredentials';
-import {RegisterCredentials} from '../models/registerCredentials';
-import * as _ from 'lodash';
-import {AngularFire, FirebaseAuthState} from 'angularfire2';
-import {AuthConfiguration, authDataToAuthState} from 'angularfire2/auth';
-import {EmailPasswordCredentials} from 'angularfire2/auth';
-import {UserBasicInfo} from '../models/userBasicInfo';
-import {AuthMethods, AuthProviders} from '../../../node_modules/angularfire2/auth/auth_backend';
-import {CitationService} from './citation.service';
+import {AngularFire} from 'angularfire2';
 import {Citation} from '../models/citation';
 import {AuthService} from './auth.service';
 
@@ -18,7 +9,7 @@ import {AuthService} from './auth.service';
 @Injectable()
 export class UsersService {
 
-  constructor(private http:Http, public af:AngularFire, private citService:CitationService) {
+  constructor(public af:AngularFire) {
 
   }
 
@@ -99,15 +90,6 @@ export class UsersService {
     return Observable.fromPromise(
       Promise.all(ids.map( (id) => this.af.database.object(`/feeds/${to}/${id}`).set(true)))
     );
-  }
-
-  private handleError (error: any) {
-    // In a real world app, we might use a remote logging infrastructure
-    // We'd also dig deeper into the error to get a better message
-    let errMsg = (error.message) ? error.message :
-      error.status ? `${error.status} - ${error.statusText}` : 'Server error';
-    console.error("UsersService" + errMsg); // log to console instead
-    return Observable.throw(errMsg);
   }
 
 }

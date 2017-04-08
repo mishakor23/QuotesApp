@@ -2,9 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {CitationService} from '../../services/citation.service';
 import {Observable} from '../../../../node_modules/rxjs/Observable';
 import {Citation} from '../../models/citation';
-import {ActivatedRoute} from '@angular/router/src/router_state';
-import {Subscription} from 'rxjs/Subscription';
-import {Params} from '../../../../node_modules/@angular/router/src/shared';
+import {ActivatedRoute} from '@angular/router';
+import {Params} from '@angular/router/src/shared';
 
 @Component({
   selector: 'app-tag-page',

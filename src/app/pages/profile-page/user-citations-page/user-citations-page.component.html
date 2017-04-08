@@ -3,6 +3,6 @@
 </div>
 
 <div fxLayout="row" fxLayoutAlign="center center">
-    <app-citation-list class="full-width" [citations]="citations$ | async"></app-citation-list>
+    <app-citation-list-preloader class="full-width" [citations$]="citations$"></app-citation-list-preloader>
 </div>
 

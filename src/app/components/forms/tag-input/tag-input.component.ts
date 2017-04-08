@@ -1,5 +1,5 @@
 import {Component, OnInit, forwardRef, Input} from '@angular/core';
-import {FormGroup, Validators, FormBuilder, ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
+import {FormGroup, FormBuilder, ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
 
 @Component({
   selector: 'app-tag-input',

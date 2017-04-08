@@ -1,16 +1,12 @@
 import {Component, OnInit} from '@angular/core';
 import {UtilsService} from './services/utils.service';
-import {MdSnackBarConfig} from '../../node_modules/@angular/material/snack-bar/snack-bar-config';
-import {MdSnackBar} from '../../node_modules/@angular/material/snack-bar/snack-bar';
-import {MdDialog} from '../../node_modules/@angular/material/dialog/dialog';
-import {MdDialogConfig} from '../../node_modules/@angular/material/dialog/dialog-config';
-import {RegisterFormComponent} from './components/forms/register-form/register-form.component';
-import {CitationFormComponent} from './components/forms/citation-form/citation-form.component';
-import {LoginFormComponent} from './components/forms/login-form/login-form.component';
-import {CitationService} from './services/citation.service';
+import {MdSnackBarConfig} from '@angular/material/snack-bar/snack-bar-config';
+import {MdSnackBar} from '@angular/material/snack-bar/snack-bar';
 import {AuthService} from './services/auth.service';
 import {UserBasicInfo} from './models/userBasicInfo';
 import {Observable} from '../../node_modules/rxjs/Observable';
+import {Router} from '@angular/router';
+import {User} from './models/user';
 
 @Component({
   selector: 'app-root',
@@ -19,16 +15,16 @@ import {Observable} from '../../node_modules/rxjs/Observable';
 })
 export class AppComponent implements OnInit{
 
-  user$:Observable<UserBasicInfo>;
+  private user$:Observable<User>;
 
   constructor(private utilsService:UtilsService,
               private snackBar:MdSnackBar,
-              private userService:AuthService)
+              private authService:AuthService, private router:Router)
   {
-    this.user$ = this.userService.userStream$;
   }
 
   ngOnInit(): void {
+    this.user$ = this.authService.userStream$;
     this.utilsService.onMessage().subscribe((msg) => {
       this.showMessageBar(msg);
     });
@@ -36,7 +32,9 @@ export class AppComponent implements OnInit{
 
   onLogOut():void
   {
-    this.userService.logout();
+    this.authService.logout().then( () => {
+      this.router.navigate(['/login']);
+    });
   }
 
   private showMessageBar(msg:string):void

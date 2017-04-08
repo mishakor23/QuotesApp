@@ -3,20 +3,16 @@
 
     <div fxLayout="row" fxFlex="100%" fxLayoutGap="10px">
       <div fxFlex="15%">
-        <button md-icon-button>
-          <md-icon class="md-24">menu</md-icon>
-        </button>
-
       </div>
       <span fxFlex="70%" fxFlex.sm="">
-        <span md-icon-button class="md-24" *ngIf="userService.isLoggedIn()" routerLink="/profile">
+        <span md-icon-button class="md-24" *ngIf="authService.isLoggedIn()" routerLink="/profile">
           {{(user$ | async).username}}
         </span>
       </span>
       <div fxFlex="15%">
-        <button md-button *ngIf="!userService.isLoggedIn()" (click)="utilsService.openDialog('register')">Sign Up</button>
-        <button md-button *ngIf="!userService.isLoggedIn()" (click)="utilsService.openDialog('login')">Log In</button>
-        <button md-button *ngIf="userService.isLoggedIn()" (click)="onLogOut()">Log Out</button>
+        <button md-button *ngIf="!authService.isLoggedIn()" (click)="utilsService.openDialog('register')">Sign Up</button>
+        <button md-button *ngIf="!authService.isLoggedIn()" (click)="utilsService.openDialog('login')">Log In</button>
+        <button md-button *ngIf="authService.isLoggedIn()" (click)="onLogOut()">Log Out</button>
       </div>
     </div>
   </md-toolbar>
@@ -26,8 +22,8 @@
        fxLayoutAlign="center"
        fxLayoutGap="10px"
        fxLayoutGap.xs="0">
-    <div fxFlex="15%">
-      <md-nav-list  *ngIf="userService.isLoggedIn()">
+    <div fxFlex="15%" >
+      <md-nav-list  *ngIf="authService.isLoggedIn()">
         <md-list-item routerLink="/" routerLinkActive="activeLink" [routerLinkActiveOptions]="{exact:true}">
           Home
         </md-list-item>

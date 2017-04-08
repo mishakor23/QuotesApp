@@ -1,6 +1,5 @@
-import {Component, OnInit, Output, Input, EventEmitter, OnChanges, SimpleChanges} from '@angular/core';
+import {Component, OnInit, Output, Input, EventEmitter} from '@angular/core';
 import {Citation} from '../../models/citation';
-import {User} from '../../models/user';
 import {CitationService} from '../../services/citation.service';
 import {AuthService} from '../../services/auth.service';
 

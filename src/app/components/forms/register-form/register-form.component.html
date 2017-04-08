@@ -7,21 +7,21 @@
 
         <div class="col-xs-12">
           <md-input-container floatingPlaceholder="false" [dividerColor]="usernameError == ''?'primary':'warn'" class="full-width">
-            <input md-input formControlName="username" #textAreaField placeholder="Username">
+            <input mdInput formControlName="username" #textAreaField placeholder="Username">
             <md-hint *ngIf="usernameError" color="red" align="start">{{usernameError}}</md-hint>
           </md-input-container>
         </div>
 
         <div class="col-xs-12">
           <md-input-container floatingPlaceholder="false" [dividerColor]="emailError == ''?'primary':'warn'" class="full-width">
-            <input md-input formControlName="email" #textAreaField placeholder="Email">
+            <input mdInput formControlName="email" #textAreaField placeholder="Email">
             <md-hint *ngIf="emailError" color="red" align="start">{{emailError}}</md-hint>
           </md-input-container>
         </div>
 
         <div class="col-xs-12">
           <md-input-container floatingPlaceholder="false" [dividerColor]="passwordError == ''?'primary':'warn'" class="full-width">
-            <input type="password" md-input formControlName="password" #textAreaField placeholder="Password">
+            <input type="password" mdInput formControlName="password" #textAreaField placeholder="Password">
             <md-hint *ngIf="passwordError" color="red" align="start">{{passwordError}}</md-hint>
           </md-input-container>
         </div>
@@ -37,7 +37,7 @@
         </div>
 
         <div class="offset-xs-4 col-xs-4">
-          <button class="submit-btn" md-dialog-close (click)="onSubmit()" type="button" md-raised-button color="primary">Submit</button>
+          <button class="submit-btn" (click)="onSubmit()" type="button" md-raised-button color="primary">Submit</button>
         </div>
       </div>
     </form>

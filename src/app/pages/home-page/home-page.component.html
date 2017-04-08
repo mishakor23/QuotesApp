@@ -4,6 +4,6 @@
           (click)="utilsService.openDialog('citation')"
           color="primary">Add Citation</button>
   <div class="app-top-margin">
-    <app-citation-list [citations]="citations$ | async" class="full-width"></app-citation-list>
+    <app-citation-list-preloader [citations$]="citations$" class="full-width"></app-citation-list-preloader>
   </div>
 </div>

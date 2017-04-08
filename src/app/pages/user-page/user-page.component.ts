@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {CitationService} from '../../services/citation.service';
-import {ActivatedRoute} from '@angular/router/src/router_state';
+import {ActivatedRoute} from '@angular/router';
 import {Observable} from 'rxjs/Observable';
 import {Citation} from '../../models/citation';
-import {Params} from '../../../../node_modules/@angular/router/src/shared';
-import {AuthService} from '../../services/auth.service';
 import {User} from '../../models/user';
 import {UsersService} from '../../services/users.service';
 

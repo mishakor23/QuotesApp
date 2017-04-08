@@ -2,9 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {CitationService} from '../../services/citation.service';
 import {Observable} from 'rxjs';
 import {Citation} from '../../models/citation';
-import {MdDialog} from '../../../../node_modules/@angular/material/dialog/dialog';
-import {MdDialogConfig} from '../../../../node_modules/@angular/material/dialog/dialog-config';
-import {CitationFormComponent} from '../../components/forms/citation-form/citation-form.component';
 import {UtilsService} from '../../services/utils.service';
 import {AuthService} from '../../services/auth.service';
 
@@ -19,7 +16,7 @@ export class HomePageComponent implements OnInit {
 
   citations$:Observable<Citation[]>;
 
-  constructor(public citService:CitationService, private utilsService:UtilsService, public userService:AuthService) {
+  constructor(public citService:CitationService, public userService:AuthService, public utilsService:UtilsService) {
 
   }
 

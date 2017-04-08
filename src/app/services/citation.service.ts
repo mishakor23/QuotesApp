@@ -1,11 +1,9 @@
 import { Injectable } from '@angular/core';
 import {Citation} from "../models/citation";
 import 'rxjs/Rx';
-import {Observable, Subject} from 'rxjs/Rx';
-import {Http, Response, RequestOptions, Headers} from '@angular/http';
+import {Observable} from 'rxjs/Rx';
 import {User} from "../models/user";
-import * as _ from 'lodash';
-import {AngularFire, FirebaseObjectObservable, FirebaseListObservable} from 'angularfire2';
+import {AngularFire} from 'angularfire2';
 import {AuthService} from './auth.service';
 import {UserBasicInfo} from '../models/userBasicInfo';
 import {Ratings} from '../models/ratings';
@@ -27,7 +25,7 @@ export class CitationService {
 
   private lastUserId:string = "none";
 
-  constructor(private af:AngularFire, private authService:AuthService) {
+  constructor(private af:AngularFire) {
 
   }
 
@@ -74,8 +72,8 @@ export class CitationService {
 
   getCitationById(id:string):Observable<Citation>
   {
-    return this.af.database.object('/citations/'+id).map( (res:Response) => {
-      return res.json() as Citation;
+    return this.af.database.object('/citations/'+id).map( (data) => {
+      return data as Citation;
     }, (err) => {
       this.handleError(err);
     });

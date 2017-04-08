@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {UtilsService} from '../../../services/utils.service';
 import {AuthService} from '../../../services/auth.service';
-import {CitationService} from '../../../services/citation.service';
 import {CitationData} from '../../../models/citationData';
 import {Output, EventEmitter} from '@angular/core';
 
@@ -28,8 +27,7 @@ export class CitationFormComponent implements OnInit {
   authorError:string = "";
 
   constructor(private fb: FormBuilder,
-              private utilsService:UtilsService,
-              private userService:AuthService) { }
+              private utilsService:UtilsService) { }
 
   ngOnInit() {
     this.form = this.fb.group({

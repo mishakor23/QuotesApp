@@ -6,14 +6,14 @@
       <div class="row">
         <div class="col-xs-12">
           <md-input-container dividerColor="primary" class="full-width">
-            <input md-input formControlName="email" #textAreaField placeholder="Email">
+            <input mdInput formControlName="email" #textAreaField placeholder="Email">
             <md-hint *ngIf="emailError" color="warn" align="start">{{emailError}}</md-hint>
           </md-input-container>
         </div>
 
         <div class="col-xs-12">
           <md-input-container dividerColor="primary" class="full-width">
-            <input type="password" md-input formControlName="password" #textAreaField placeholder="Password">
+            <input type="password" mdInput formControlName="password" #textAreaField placeholder="Password">
             <md-hint *ngIf="passwordError" color="warn" align="start">{{passwordError}}</md-hint>
           </md-input-container>
         </div>
