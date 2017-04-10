@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {UtilsService} from './services/utils.service';
-import {MdSnackBarConfig} from '@angular/material/snack-bar/snack-bar-config';
-import {MdSnackBar} from '@angular/material/snack-bar/snack-bar';
+import {MdSnackBarConfig} from '@angular/material';
+import {MdSnackBar} from '@angular/material';
 import {AuthService} from './services/auth.service';
 import {UserBasicInfo} from './models/userBasicInfo';
 import {Observable} from '../../node_modules/rxjs/Observable';

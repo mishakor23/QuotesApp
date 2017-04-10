@@ -3,10 +3,10 @@ import {RegisterFormComponent} from './forms/register-form/register-form.compone
 import {CitationFormComponent} from './forms/citation-form/citation-form.component';
 import {LoginFormComponent} from './forms/login-form/login-form.component';
 import {UtilsService} from '../services/utils.service';
-import {MdDialog} from '@angular/material/dialog/dialog';
+import {MdDialog} from '@angular/material';
 import {CitationService} from '../services/citation.service';
 import {AuthService} from '../services/auth.service';
-import {MdDialogConfig} from '@angular/material/dialog/dialog-config';
+import {MdDialogConfig} from '@angular/material';
 import {Subscription} from 'rxjs/Subscription';
 import {Router} from '@angular/router';
 
